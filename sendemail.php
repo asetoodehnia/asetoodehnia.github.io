@@ -1,12 +1,10 @@
 <?php
-   
-
     session_cache_limiter( 'nocache' );
     header( 'Expires: ' . gmdate( 'r', 0 ) );
     header( 'Content-type: application/json' );
 
 
-    $to             = 'themehippo@gmail.com'; //put your email here
+    $to             = 'asetoodehnia@berkeley.edu'; //put your email here
     $email_template = 'simple.html';  // will find it on email-templates/ directory
 
     $subject    = "SUBJECT";
@@ -66,3 +64,4 @@
     echo json_encode( $result );
 
     die;
+?>
