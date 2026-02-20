@@ -342,7 +342,18 @@ body:has(.hero) .main-content > section:first-child { padding-top: 50px; }
     50% { transform: translateY(6px); }
 }
 .resume-about { padding-top: 3rem; padding-bottom: 3rem; font-size: 0.72em; }
-.resume-about-inner { width: 75%; max-width: 75%; margin: 0 auto; }
+/* Single config for all resume section containers */
+.resume-about .resume-section-inner,
+.resume-body .resume-section-inner,
+.resume-skills .resume-section-inner {
+    width: 100%;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    box-sizing: border-box;
+}
 .resume-about-text { margin-bottom: 1rem; line-height: 1.7; }
 .resume-contact-inline { font-size: 1rem; color: #555; margin: 0 0 1rem; line-height: 1.5; }
 .resume-contact-inline a { color: var(--accent); }
@@ -362,19 +373,11 @@ body:has(.hero) .main-content > section:first-child { padding-top: 50px; }
 .resume-pdf-link:hover { background: var(--accent-hover); color: #fff; }
 .resume-body { font-size: 0.72em; }
 .resume-skills { font-size: 0.72em; }
-.resume-skills-inner { width: 75%; max-width: 75%; margin: 0 auto; padding-left: 2rem; padding-right: 2rem; }
 .resume-skills .resume-h2 { margin-bottom: 1rem; }
 .resume-skills p { margin-bottom: 0.5rem; }
 .resume-skills p:last-child { margin-bottom: 0; }
-.resume-body .container-fluid { padding-left: 2rem; padding-right: 2rem; }
-.resume-body .resume-single-col {
-    width: 75%;
-    max-width: 75%;
-    margin-left: auto;
-    margin-right: auto;
-}
-.resume-single-col .resume-h2 { margin-top: 2rem; }
-.resume-single-col .resume-h2:first-child { margin-top: 0; }
+.resume-section-inner .resume-h2 { margin-top: 2rem; }
+.resume-section-inner .resume-h2:first-child { margin-top: 0; }
 .resume-h2 {
     font-size: 1.15rem;
     font-weight: 700;
