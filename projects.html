@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Projects — Adel Setoodehnia</title>
+    <link href="img/redwoods_forest.jpg" rel="icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+<div id="main-wrapper">
+<nav class="site-nav">
+    <div class="nav-inner">
+        <a class="nav-brand" href="index.html">Adel</a>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="resume.html">Resume</a>
+            <a href="projects.html" class="active">Projects</a>
+            <a href="mailto:asetoodehnia@berkeley.edu" class="nav-cta">Contact</a>
+        </div>
+    </div>
+</nav>
+
+<main class="main-content">
+<header class="projects-hero">
+    <div class="projects-hero-inner">
+        <h1 class="projects-hero-title">Projects</h1>
+        <a href="#featured" class="projects-hero-scroll" aria-label="Scroll to Featured work"><i class="fa fa-chevron-down"></i></a>
+    </div>
+</header>
+
+<section id="featured" class="section-wrapper section-experience gray-bg">
+    <div class="container-fluid">
+        <h2 class="resume-h2">Featured work</h2>
+        <div class="row">
+            <div class="col-md-6">
+                <a class="portfolio-item" href="https://asetoodehnia.github.io/Colorizing-the-Prokudin-Gorskii-Collection/">
+                    <div class="portfolio-thumb"><img src="img/emir_color.jpg" alt=""></div>
+                    <div class="portfolio-info">
+                        <h3>Colorizing the Prokudin Gorskii Collection</h3>
+                        <small></small>
+                    </div>
+                </a>
+                <a class="portfolio-item">
+                    <div class="portfolio-thumb"><img src="img/pacman_game.gif" alt=""></div>
+                    <div class="portfolio-info">
+                        <h3>PACMAN: Reinforcement Learning</h3>
+                        <small>Q-learning and Value Iteration</small>
+                    </div>
+                </a>
+                <a class="portfolio-item">
+                    <div class="portfolio-thumb"><img src="img/BearMaps.png" alt=""></div>
+                    <div class="portfolio-info">
+                        <h3>BearMaps</h3>
+                        <small>A web mapping application which spans all of Berkeley</small>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-6">
+                <a class="portfolio-item" href="https://asetoodehnia.github.io/Neural-Style-Transfer/">
+                    <div class="portfolio-thumb"><img src="img/redwoods_forest.jpg" alt=""></div>
+                    <div class="portfolio-info"><h3>Neural Style Transfer</h3></div>
+                </a>
+                <a class="portfolio-item" href="https://asetoodehnia.github.io/Face-Morphing">
+                    <div class="portfolio-thumb"><img src="img/Face-Morphing.png" alt=""></div>
+                    <div class="portfolio-info"><h3>Face Morphing</h3></div>
+                </a>
+                <a class="portfolio-item" href="files/182paper.pdf">
+                    <div class="portfolio-thumb"><img src="img/batteries.png" alt=""></div>
+                    <div class="portfolio-info">
+                        <h3>Battery [Life] Not Included</h3>
+                        <small>Using Attention Models to Predict Battery Life</small>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+</main>
+<footer class="site-footer">
+    <div class="footer-inner">
+        <span class="copyright">© 2025 Adel Setoodehnia</span>
+        <ul class="footer-social">
+            <li><a href="https://github.com/asetoodehnia" aria-label="GitHub"><i class="fa fa-github"></i></a></li>
+            <li><a href="https://www.linkedin.com/in/adel-setoodehnia/" aria-label="LinkedIn"><i class="fa fa-linkedin"></i></a></li>
+            <li><a href="mailto:asetoodehnia@berkeley.edu" aria-label="Email"><i class="fa fa-envelope"></i></a></li>
+        </ul>
+    </div>
+</footer>
+</div>
+<script src="js/jquery-2.1.4.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/scripts.js"></script>
+<script>
+(function () {
+    var $link = $('.projects-hero-scroll');
+    var $target = $('#featured');
+    var $scrollContainer = $('.main-content');
+    if (!$link.length || !$target.length || !$scrollContainer.length) return;
+    $link.on('click', function (e) {
+        e.preventDefault();
+        var top = $target.offset().top - $scrollContainer.offset().top + $scrollContainer.scrollTop();
+        $scrollContainer.animate({ scrollTop: top }, 800);
+    });
+})();
+</script>
+</body>
+</html>
